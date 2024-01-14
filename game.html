@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="og:type" content="website" />
+    <meta property="og:title" content="rpgGPT" />
+    <meta property="og:description" content="An infinite world awaits..." />
+    <meta property="og:url" content="https://rpg-gpt.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="media/logos/favicon.png" />
+    <meta property="og:image" content="https://rpg-gpt.com/media/logos/splash1200_630.jpg" />
+    <meta name="twitter:image" content="https://rpg-gpt.com/media/logos/splash1200_630.jpg" />
+    <title>rpgGPT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    </head>
+<body>
+    <div class="container flex column nowrap gap-big">
+        <header class="flex row nowrap justify-between align-center gap-mid px-mid">
+            <div class="header-logo">
+                <h1 class="fs-2 fw-1 chelsea-market responsive-location" id="playerLocation"></h1>
+            </div>
+            <div class="header-links flex row nowrap gap-mid">
+                <a href="https://github.com/yonder-gg/rpgGPT" class="header-button main-button flex nowrap justify-center align-center p-sml2" aria-label="GitHub">
+                    <img src="./media/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://discord.gg/nezrmtP8kG" class="header-button main-button flex nowrap justify-center align-center p-sml2" aria-label="Discord">
+                    <img src="./media/icons/discord.svg" alt="Discord">
+                </a>
+            </div>
+        </header>        
+        <div class="flex row-responsive nowrap gap-big flex-1 h-0">
+            <div class="flex column nowrap gap-big">
+                <div class="characters-status flex row nowrap">
+                    <div id="charactersList" class="characters-status-list flex-1">
+                        <div class="characters-status-character flex column nowrap align-center gap-mid">
+                            <img class="characters-status-character-image" src="./media/characters/0b4ed75449d222c894d8388d3fa58e3f53c1063e796ddbab289502ead2ea7771.jpeg" alt="Character">
+                            <div class="div flex column nowrap align-center gap-sml">
+                                <span class="fs-6 fw-2">Character Name</span>
+                                <span class="fs-7 fw-6 flex row nowrap align-center gap-sml"><img src="./media/icons/heart.png" height="20" width="20" alt="Health:">20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="characters-status-active p-mid">
+                        <div class="character-player small-screen-show" style="margin-top: -10px;" >
+                            <div class="characters-status-character flex column nowrap align-center gap-mid">
+                                <img class="characters-status-character-image" src="./media/player/player.jpeg" alt="Character">
+                                <div class="div flex column nowrap align-center gap-sml">
+                                    <span class="fs-6 fw-1 player-name">Mysterious Traveler</span>
+                                    <span class="fs-7 fw-6 flex row nowrap align-center gap-sml"><img src="./media/icons/heart.png" height="20" width="20" alt="Health:">20</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-player small-screen-hide">
+                    <div class="characters-status-character flex column nowrap align-center gap-mid">
+                        <img class="characters-status-character-image" src="./media/player/player.jpeg" alt="Character">
+                        <div class="div flex column nowrap align-center gap-sml">
+                            <span class="fs-6 fw-1 player-name">Mysterious Traveler</span>
+                            <span class="fs-7 fw-6 flex row nowrap align-center gap-sml"><img src="./media/icons/heart.png" height="20" width="20" alt="Health:">20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-container flex column nowrap align-center gap-big flex-1">
+                <div class="chat-window" id="chat-window">
+                </div>
+                <button type="button" id="continue-btn" class="ellipsis-button main-button p-sml2"><img src="./media/icons/ellipsis.png" height="30" alt=""></button>
+            </div>
+        </div>
+        <div class="controls-container flex column-responsive nowrap align-center" id="controls-container">
+            <div class="input-container flex row nowrap gap-mid bg-light p-sml">
+                <input type="text" id="input-message" class="flex-1 p-sml2 fw-2 c-dark" placeholder="Enter your message...">
+                <button id="send-btn" class="talk-button main-button p-sml2"><img src="./media/icons/whiteArrow.png" alt="Talk" /></button>
+            </div>
+            <div class="actions-container">
+                <div class="fight-container p-mid" hidden></div>
+                <button type="button" id="fight-btn" class="fight-button main-button p-sml2"><img src="./media/icons/punch.png" alt="Fight"></button>
+            </div>
+        </div>
+    </div>
+    <script src="ui.js"></script> 
+    <script src="characterIcons.js"></script>
+    <script src="db.js"></script>
+    <script src="llm.js"></script>
+    <script src="auth.js"></script>
+    <script src="intro.js"></script>
+    <script src="game.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker
+              .register('/sw.js')
+              .then((registration) => {
+                console.log('Service Worker registered:', registration);
+              })
+              .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+              });
+          });
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="og:type" content="website" />
+    <meta property="og:title" content="rpgGPT" />
+    <meta property="og:description" content="An infinite world awaits..." />
+    <meta property="og:url" content="https://rpg-gpt.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="media/logos/favicon.png" />
+    <meta property="og:image" content="https://rpg-gpt.com/media/logos/splash1200_630.jpg" />
+    <meta name="twitter:image" content="https://rpg-gpt.com/media/logos/splash1200_630.jpg" />
+    <title>rpgGPT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            text-align: center;
+            font-family: 'Chelsea Market', cursive;
+        }
+        .grid-item img {
+            max-width: 100%;
+            max-height: 256px;
+            height: auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container flex column nowrap gap-big">
+      <header class="flex row nowrap justify-between align-center gap-mid px-mid">
+          <div class="header-logo">
+              <h1 class="fs-2 fw-1 chelsea-market">rpgGPT</h1>
+          </div>
+          <div class="header-links flex row nowrap gap-mid">
+              <a href="https://github.com/yonder-gg/rpgGPT" class="header-button main-button flex nowrap justify-center align-center p-sml2" aria-label="GitHub">
+                  <img src="./media/icons/github.svg" alt="GitHub">
+              </a>
+              <a href="https://discord.gg/nezrmtP8kG" class="header-button main-button flex nowrap justify-center align-center p-sml2" aria-label="Discord">
+                  <img src="./media/icons/discord.svg" alt="Discord">
+              </a>
+          </div>
+      </header>  
+  <div class="grid-container">
+      <div class="grid-item">
+          <a href="game.html?companion=rickSanchez"><img src="media/companions/rick_sanchez.jpeg" alt="Rick Sanchez" /></a>
+          <div>Rick Sanchez</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=elonMusk"><img src="media/companions/elon_musk.jpeg" alt="Elon Musk" /></a>
+          <div>Elon Musk</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=billieEilish"><img src="media/companions/billie_eilish.jpeg" alt="Billie Eilish" /></a>
+          <div>Billie Eilish</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=kanyeWest"><img src="media/companions/kanye_west.jpeg" alt="Kanye West" /></a>
+          <div>Kanye West</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=raidenShogun"><img src="media/companions/raiden_shogun.jpeg" alt="Raiden Shogun" /></a>
+          <div>Raiden Shogun</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=eldricTheBard"><img src="media/companions/eldric_the_bard.jpeg" alt="Eldric the Bard" /></a>
+          <div>Eldric the Bard</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=2b"><img src="media/companions/2b.jpeg" alt="2B" /></a>
+          <div>2B</div>
+      </div>
+      <div class="grid-item">
+          <a href="game.html?companion=mario"><img src="media/companions/mario.jpeg" alt="Mario" /></a>
+          <div>Mario</div>
+      </div>
+      <div class="grid-item">
+          <a href="/character_creator.html"><img src="media/companions/custom.jpeg" alt="Custom Character" /></a>
+          <div>Custom Character</div>
+      </div>
+    </div>  
+   </div>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              console.log('Service Worker registered:', registration);
+            })
+            .catch((error) => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

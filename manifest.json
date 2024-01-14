@@ -1,0 +1,24 @@
+{
+    "name": "rpgGPT",
+    "short_name": "rpgGPT",
+    "description": "An infinite world awaits...",
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "https://rpg-gpt.com/media/logos/favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://rpg-gpt.com/media/logos/splash1200_630.jpg",
+        "sizes": "1200x630",
+        "type": "image/jpeg"
+      }
+    ]
+  }
+  

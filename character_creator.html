@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Creator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 10px;
+        }
+        .form-control, .form-control-file {
+            margin-bottom: 10px;
+        }
+        #icon-preview {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center">Character Creator</h2>
+    <form id="character-form">
+        <div class="form-group">
+            <label for="name">Character Name</label>
+            <input type="text" class="form-control" id="name" maxlength="64">
+            <small class="form-text text-muted"><span id="name-counter">0</span>/64</small>
+        </div>
+        <div class="form-group">
+            <label for="description">Character Description</label>
+            <textarea class="form-control" id="description" rows="4" maxlength="750"></textarea>
+            <small class="form-text text-muted"><span id="description-counter">0</span>/750</small>
+        </div>
+        <div class="form-group">
+            <label for="entrance">What would this character say when making an entrance?</label>
+            <input type="text" class="form-control" id="entrance" maxlength="100">
+            <small class="form-text text-muted"><span id="entrance-counter">0</span>/100</small>
+        </div>
+        <div class="form-group">
+            <label for="askName">What would this character say when asking for someone's name?</label>
+            <input type="text" class="form-control" id="askName" maxlength="100">
+            <small class="form-text text-muted"><span id="askName-counter">0</span>/100</small>
+        </div>
+        <div class="form-group">
+            <label for="icon">Character Icon</label>
+            <input type="file" class="form-control" id="icon">
+        </div>
+        <button type="submit" id="create-character" class="btn btn-primary">Create Character</button>
+    </form>
+    <img id="icon-preview" src="#"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="db.js"></script>
+    <script>
+        $('#name, #description, #entrance, #askName').on('input', function() {
+            let id = $(this).attr('id');
+            let len = $(this).val().length;
+            $('#' + id + '-counter').text(len);
+        });
+    
+        function readImageFile(file) {
+            let reader = new FileReader();
+            reader.onloadend = function() {
+                let icon_src = reader.result;
+                $('#icon-preview').attr('src', icon_src);
+                createCompanion(icon_src);
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                $('#icon-preview').attr('src', "");
+            }
+        }
+    
+        function createCompanion(icon_src) {
+            const characterName = $('#name').val();
+            const characterDescription = $('#description').val();
+            const characterEntrance = $('#entrance').val();
+            const characterAskPlayerName = $('#askName').val();
+            let companion = new Companion(characterName, characterDescription, characterEntrance, characterAskPlayerName);
+            console.log(companion);
+            // Save companion data and image to localStorage
+            localStorage.setItem('companion', JSON.stringify(companion));
+            localStorage.setItem('icon_src', icon_src);
+            // Redirect to the game page
+            window.location.href = window.location.pathname.replace('character_creator.html', 'game.html') + "?companion=custom";
+        }
+    
+        $('#character-form').on('submit', function(e) {
+            e.preventDefault();
+            let file = document.querySelector('#icon').files[0];
+            readImageFile(file);
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

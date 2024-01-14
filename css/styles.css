@@ -1,0 +1,465 @@
+@import url('./reset.css');
+@import url('./preset.css');
+
+:root{
+    --small-screen-chat-height: unset;
+}
+
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Work Sans', Arial, sans-serif;
+}
+
+.chat-container{
+    height: 100%;
+    max-height: 60vh;
+}
+
+.chat-window{
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.message-center {
+    justify-content: center;
+}
+
+.game-message-container {
+    justify-content: center;
+}
+
+.game-message .action-message {
+    display: inline-block;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    width: 100%;
+}
+
+
+.user-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.user-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-message {
+    display: block;
+    word-wrap: break-word;
+}
+
+.game-message {
+    display: inline-block;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+}
+
+.input-container {
+    width: 100%;
+    border-radius: var(--radius-big);
+}
+
+.input-container input {
+    width: inherit;
+    border-radius: var(--radius-big);
+    outline: none;
+}
+
+button:disabled, #continue-btn:disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  button:disabled:hover, #continue-btn:disabled:hover {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+input[type="text"]:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.action-icon {
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+}
+
+.items-container, .target-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.negative-effect {
+    display: inline-block;
+    font-style: italic;
+    color: var(--color-negative);
+    text-align: center;
+    width: 100%;
+}
+  
+.positive-effect {
+    display: inline-block;
+    font-style: italic;
+    color: green;
+    text-align: center;
+    width: 100%;
+}
+
+
+.end-game-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .end-game-window {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    height: 50vh;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .player-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .game-over-message {
+    width: 90%;
+    height: 25vh;
+    border: none;
+    resize: none;
+    background: #f0f0f0;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff;
+    margin: 20px 0;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .end-game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .end-game-button {
+    background-color: var(--color-positive);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.buttons-container a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    background-color: yellow;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons-container a:hover {
+    text-decoration: none;
+    background-color: #ffcc00;
+}
+
+
+/* container */
+.container{
+    height: 100vh;
+    width: 100vw;
+    padding-top: var(--size-mid);
+    padding-bottom: var(--size-mid);
+}
+
+/* header */
+.header-logo{
+    white-space: nowrap;
+}
+
+/* buttons */
+.main-button{
+    min-width: 100px;
+    border: none;
+    border-radius: var(--radius-big);
+    cursor: pointer;
+}
+
+.header-button, .header-button:link, .header-button:visited{
+    border-radius: var(--radius-mid);
+    border: 1px solid var(--color-10);
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+.header-button:hover, .header-button:focus, .header-button:active{
+    border-color: #A259FF;
+}
+
+.talk-button, .ellipsis-button{
+    background-color: var(--color-10);
+}
+
+.talk-button:hover, .ellipsis-button:hover{
+    background-color: #A259FF;
+}
+
+.fight-button{
+    background-color: var(--color-negative);
+}
+
+.fight-button:hover{
+    background-color: #a1372b;
+}
+
+.header-button > img{
+    display: block;
+    height: 25px;
+    width: 25px;
+}
+
+/* characters-status */
+.characters-status-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    gap: var(--size-sml)
+}
+
+.characters-status-character-image{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.characters-status-active .characters-status-character-image, .character-player .characters-status-character-image{
+    height: 70px;
+    width: 70px;
+    -webkit-box-shadow: 0px 0px 30px -10px #000000; 
+    box-shadow: 0px 0px 30px -10px #000000;
+}
+
+/* chat */
+.user-details{
+    position: relative;
+    padding: var(--size-big);
+}
+
+.user-details::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('./media/icons/dialog.png');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.game-message, .action-message{
+    width: 100%;
+    padding: var(--size-big);
+    text-align: center;
+}
+
+/* actions */
+.actions-container{
+    position: relative;
+}
+
+.fight-container{
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 20px;
+    gap: 2rem;
+    background: var(--color-light);
+    -webkit-box-shadow: 0px 0px 3px 0px #000000; 
+    box-shadow: 0px 0px 3px 0px #000000;
+}
+
+.action-button{
+    padding: var(--size-sml2);
+    background-color: var(--color-negative);
+    border-radius: var(--radius-mid);
+    color: var(--color-light);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.action-button:hover{
+    background-color: #a1372b;
+}
+
+.small-screen-show{
+    display: none;
+}
+
+.character-player.small-screen-show{
+    padding: var(--size-sml);
+    border-radius: var(--radius-mid);
+}
+
+@media only screen and (max-width: 900px){
+    .container{
+        padding-top: var(--container);
+        padding-bottom: var(--container);
+    }
+
+    .main-button{
+        min-width: unset;
+    }
+
+    .chat-container{
+        max-height: var(--small-screen-chat-height);
+        overflow: auto;
+    }
+
+    .characters-status-character-image{
+        height: 50px;
+        width: 50px;
+    }
+
+    .characters-status-active .characters-status-character-image, .character-player .characters-status-character-image{
+        height: 60px;
+        width: 60px;
+    }
+
+    .fight-container{
+        left: unset;
+        transform: unset;
+        right: 0;
+    }
+
+    .header-button > img{
+        display: block;        
+    }
+
+    .header-button > span{
+        display: none;
+    }
+
+    .small-screen-show{
+        display: block;
+    }
+
+    .small-screen-hide{
+        display: none;
+    }
+}
+
+/* Set default styles */
+.responsive-location {
+    font-size: 6rem;
+    font-weight: 100;
+    margin: 0;
+  }
+  
+  /* Responsive styles for screen widths between 576px and 767px */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .responsive-location {
+      font-size: 3.25rem;
+    }
+  }
+  
+  /* Responsive styles for screen widths below 576px */
+  @media (max-width: 575px) {
+    .responsive-location {
+      font-size: 3rem;
+    }
+  }
+
+  
+  .chelsea-market{
+    font-family: 'Chelsea Market', cursive;
+  }
+
+  .work-sans{
+    font-family: 'Work Sans';
+  }
+
+  .ellipsis-button {
+    margin: 0;
+    padding: 0;
+    height: 23px; /* Adjust the height of the button */
+    width: 48px; /* Adjust the width of the button */
+}
+
+.user-name-message {
+    color: #858584;
+    margin-bottom: 5px; /* adjust the value to your desired gap */
+  }

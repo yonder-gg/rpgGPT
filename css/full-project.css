@@ -1,0 +1,509 @@
+/* screen - desktop-1 */
+
+.desktop-1 {
+    align-items: flex-end;
+    background-color: var(--white);
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    height: 1024px;
+    padding: 41px 90px;
+    width: 1440px;
+  }
+  
+  .desktop-1 .flex-row {
+    gap: 10px;
+    height: 435px;
+    min-width: 1220px;
+  }
+  
+  .desktop-1 .flex-col {
+    flex-direction: column;
+    min-height: 435px;
+    width: 754px;
+  }
+  
+  .desktop-1 .title {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 48px;
+    min-height: 46px;
+    width: 219px;
+  }
+  
+  .desktop-1 .select-your-companion {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 55px;
+    margin-top: 98px;
+    min-height: 46px;
+    width: 219px;
+  }
+  
+  .desktop-1 .overlap-group1 {
+    height: 197px;
+    margin-top: 48px;
+    position: relative;
+    width: 754px;
+  }
+  
+  .desktop-1 .rick-2 {
+    height: 196px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 208px;
+  }
+  
+  .desktop-1 .elon-2 {
+    height: 189px;
+    left: 261px;
+    object-fit: cover;
+    top: 0;
+  }
+  
+  .desktop-1 .kanye-2 {
+    height: 185px;
+    left: 506px;
+    object-fit: cover;
+    top: 1px;
+  }
+  
+  .desktop-1 .name {
+    left: 62px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 166px;
+    width: 200px;
+  }
+  
+  .desktop-1 .elon-musk {
+    left: 308px;
+    letter-spacing: 0;
+    line-height: normal;
+    top: 163px;
+  }
+  
+  .desktop-1 .kanye-west {
+    left: 554px;
+    letter-spacing: 0;
+    line-height: normal;
+    top: 160px;
+  }
+  
+  .desktop-1 .overlap-group {
+    height: 187px;
+    margin-bottom: 9.78px;
+    position: relative;
+    width: 456px;
+  }
+  
+  .desktop-1 .billie-2 {
+    height: 186px;
+    left: 250px;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 200px;
+  }
+  
+  .desktop-1 .x2b_better-2 {
+    height: 187px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 200px;
+  }
+  
+  .desktop-1 .x2-b {
+    left: 90px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 162px;
+    width: 200px;
+  }
+  
+  .desktop-1 .name-1 {
+    left: 256px;
+    top: 163px;
+  }
+  
+  .desktop-1 .overlap-group-container {
+    align-items: flex-end;
+    align-self: center;
+    display: flex;
+    height: 191px;
+    margin-left: 54.0px;
+    min-width: 724px;
+  }
+  
+  .desktop-1 .overlap-group4 {
+    align-self: flex-start;
+    height: 185px;
+    position: relative;
+    width: 206px;
+  }
+  
+  .desktop-1 .mario-2 {
+    height: 185px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 200px;
+  }
+  
+  .desktop-1 .name-2 {
+    left: 6px;
+    top: 160px;
+  }
+  
+  .desktop-1 .overlap-group3 {
+    height: 186px;
+    margin-left: 47px;
+    position: relative;
+    width: 231px;
+  }
+  
+  .desktop-1 .best_genshin-2 {
+    height: 186px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 200px;
+  }
+  
+  .desktop-1 .raiden-shogun {
+    left: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 161px;
+    width: 200px;
+  }
+  
+  .desktop-1 .overlap-group2 {
+    height: 187px;
+    margin-bottom: 0.22px;
+    margin-left: 25px;
+    position: relative;
+    width: 215px;
+  }
+  
+  .desktop-1 .x056ab1ff22235654ef47 {
+    height: 187px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 200px;
+  }
+  
+  .desktop-1 .eldrich-the-bard {
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 162px;
+    width: 200px;
+  }
+  
+  .desktop-1 .elon {
+    position: absolute;
+    width: 200px;
+  }
+  
+  .desktop-1 .flex {
+    align-items: flex-end;
+    display: flex;
+  }
+  
+  .desktop-1 .kanye {
+    position: absolute;
+    width: 200px;
+  }
+  
+  .desktop-1 .name-3 {
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    width: 200px;
+  }
+  /* screen - full-project */
+  
+  .full-project {
+    align-items: flex-start;
+    background-color: var(--white);
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    height: 844px;
+    padding: 32px 25px;
+    width: 390px;
+  }
+  
+  .full-project .title-1 {
+    align-self: center;
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 1.0px;
+    min-height: 46px;
+    width: 219px;
+  }
+  
+  .full-project .select-your-companion-1 {
+    align-self: center;
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 1.0px;
+    margin-top: 34px;
+    min-height: 46px;
+    width: 219px;
+  }
+  
+  .full-project .overlap-group-container-1 {
+    align-items: flex-start;
+    display: flex;
+    gap: 35px;
+    margin-top: 12px;
+    min-width: 323px;
+  }
+  
+  .full-project .overlap-group-2 {
+    height: 135px;
+    position: relative;
+    width: 153px;
+  }
+  
+  .full-project .rick-1 {
+    height: 135px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 143px;
+  }
+  
+  .full-project .name-3 {
+    left: 54px;
+    top: 109px;
+    width: 99px;
+  }
+  
+  .full-project .elon-container {
+    height: 133px;
+    position: relative;
+    width: 135px;
+  }
+  
+  .full-project .elon-1 {
+    height: 128px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .elon-musk-1 {
+    left: 3px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 109px;
+    width: 99px;
+  }
+  
+  .full-project .overlap-group-container-2 {
+    align-items: flex-start;
+    display: flex;
+    gap: 49px;
+    margin-left: 4px;
+    margin-top: 37px;
+    min-width: 319px;
+  }
+  
+  .full-project .overlap-group7 {
+    height: 132px;
+    position: relative;
+    width: 135px;
+  }
+  
+  .full-project .billie-1 {
+    height: 125px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .name-4 {
+    left: 4px;
+    top: 108px;
+    width: 74px;
+  }
+  
+  .full-project .kanye-container {
+    height: 128px;
+    position: relative;
+    width: 135px;
+  }
+  
+  .full-project .kanye-1 {
+    height: 125px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .kanye-west-1 {
+    left: 5px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 104px;
+    width: 99px;
+  }
+  
+  .full-project .overlap-group-container-3 {
+    align-items: flex-start;
+    display: flex;
+    gap: 49px;
+    margin-left: 4px;
+    margin-top: 39px;
+    min-width: 319px;
+  }
+  
+  .full-project .overlap-group-1 {
+    height: 130px;
+    position: relative;
+    width: 135px;
+  }
+  
+  .full-project .best_genshin-1 {
+    height: 126px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .raiden-shogun-1 {
+    left: 4px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 106px;
+    width: 99px;
+  }
+  
+  .full-project .x056ab1ff22235654ef47-1 {
+    height: 126px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .eldrich-the-bard-1 {
+    left: 5px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 106px;
+    width: 113px;
+  }
+  
+  .full-project .overlap-group-container-4 {
+    align-items: flex-end;
+    display: flex;
+    gap: 24px;
+    margin-left: 4px;
+    margin-top: 30px;
+    min-width: 319px;
+  }
+  
+  .full-project .overlap-group6 {
+    height: 131px;
+    position: relative;
+    width: 160px;
+  }
+  
+  .full-project .x2b_better-1 {
+    height: 126px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .x2-b-1 {
+    left: 61px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 107px;
+    width: 99px;
+  }
+  
+  .full-project .mario-1 {
+    height: 125px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 135px;
+  }
+  
+  .full-project .name-5 {
+    left: 4px;
+    top: 106px;
+    width: 51px;
+  }
+  
+  .full-project .name {
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+  }
+  @media screen and (max-width: 1439px) {
+    .screen.desktop-1 { 
+      display: none;
+     }
+  }
+  @media screen and (min-width: 1440px) {
+    .screen.full-project { 
+      display: none;
+     }
+  }
+
+
+
