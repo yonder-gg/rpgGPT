@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>yonder_logo_squares_512</title>
+	<defs>
+		<image  width="220" height="366" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAAFuAQMAAADQ4eQIAAAAAXNSR0IB2cksfwAAAAZQTFRF////MDAwiDYwsQAAAAJ0Uk5T/wDltzBKAAAAX0lEQVR4nO3KsRFAQBCGUdeBDuiEzqzO6IQSVEBym7nEjOz90Tf7tnS5JWqcY54KhBBCCCGEEEII4T/4MgghhBDCJkY0rS935ppfw1HjghBCCCGEEEIIIfyO+1xj2hIf/5ZljE4BwdQAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="146" y="73"/>
+</svg>
